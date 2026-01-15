@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Bertrand Cafe</title>
+    <meta name="description"
+        content="Explore our curated menu of Parisian-inspired breakfast, brunch, and fine dining at Bertrand Cafe.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu-styles.css">
+</head>
+
+<body>
+    <!-- Gradient Background -->
+    <div class="gradient-background">
+        <div class="gradient-orb gradient-orb-1"></div>
+        <div class="gradient-orb gradient-orb-2"></div>
+        <div class="texture-overlay"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-back">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                    <span>Back</span>
+                </a>
+            </div>
+            <a href="index.html" class="logo">
+                <span class="logo-text">Bertrand</span>
+                <span class="logo-accent">Cafe</span>
+            </a>
+            <div class="nav-right">
+                <button class="nav-icon nav-cart" aria-label="Basket" id="cartToggle">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.8">
+                        <path d="M4 10c0 0 0-3 8-3s8 3 8 3" />
+                        <path d="M3 10h18v2c0 5-3 9-9 9s-9-4-9-9v-2z" />
+                        <circle cx="8" cy="14" r="1.5" fill="currentColor" />
+                        <circle cx="12" cy="16" r="1.5" fill="currentColor" />
+                        <circle cx="16" cy="14" r="1.5" fill="currentColor" />
+                    </svg>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Hero -->
+    <header class="menu-hero">
+        <div class="menu-hero-bg" style="background-image: url('images/menu-bg.jpg')"></div>
+        <div class="menu-hero-overlay"></div>
+        <div class="menu-hero-content">
+            <span class="menu-hero-tag">Culinary Artistry</span>
+            <h1>Our Menu</h1>
+            <p>A symphony of flavors crafted with passion and precision</p>
+        </div>
+        <div class="vintage-frame"></div>
+    </header>
+
+    <!-- Category Navigation -->
+    <nav class="menu-categories">
+        <div class="categories-inner">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="breakfast">Breakfast</button>
+            <button class="category-btn" data-category="brunch">Brunch</button>
+            <button class="category-btn" data-category="mains">Mains</button>
+            <button class="category-btn" data-category="salads">Salads</button>
+            <button class="category-btn" data-category="pastries">Pastries</button>
+            <button class="category-btn" data-category="beverages">Beverages</button>
+        </div>
+    </nav>
+
+    <!-- Menu Grid -->
+    <main class="menu-main">
+        <div class="container">
+            <!-- Breakfast Section -->
+            <section class="menu-section" data-section="breakfast">
+                <div class="section-header-vintage">
+                    <div class="ornament-line"></div>
+                    <h2>Breakfast</h2>
+                    <span class="section-subtitle">Served until 11:30</span>
+                    <div class="ornament-line"></div>
+                </div>
+
+                <div class="menu-grid">
+                    <article class="menu-item" data-category="breakfast">
+                        <div class="menu-item-image">
+                            <img src="images/PHOTO-2026-01-09-19-40-51 3.jpg" alt="Green Power Breakfast Bowl">
+                            <span class="item-badge">SIGNATURE</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Green Power Breakfast Bowl</h3>
+                                <span class="menu-item-price">R118</span>
+                            </div>
+                            <p>Scrambled eggs, smashed avocado, roasted sweet potato cubes, sautéed spinach, chili
+                                crunch & herb seeds</p>
+                            <button class="btn-add" data-item="Green Power Breakfast Bowl" data-price="118">
+                                <span>Add to Order</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 5v14M5 12h14"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="menu-item" data-category="breakfast">
+                        <div class="menu-item-image">
+                            <img src="images/PHOTO-2026-01-09-19-40-51 5.jpg" alt="Classic Garden Breakfast">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Classic Garden Breakfast</h3>
+                                <span class="menu-item-price">R105</span>
+                            </div>
+                            <p>Fluffy scrambled eggs, toasted artisan bread, grilled zucchini & peppers, fresh avocado
+                            </p>
+                            <button class="btn-add" data-item="Classic Garden Breakfast" data-price="105">
+                                <span>Add to Order</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 5v14M5 12h14"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="menu-item" data-category="breakfast">
+                        <div class="menu-item-image">
+                            <img src="images/PHOTO-2026-01-09-19-40-51 6 (1).jpg" alt="Two-Egg Urban Hash">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Two-Egg Urban Hash</h3>
+                                <span class="menu-item-price">R110</span>
+                            </div>
+                            <p>Crispy breakfast potatoes, grilled peppers, two sunny-side eggs & sliced avocado</p>
+                            <button class="btn-add" data-item="Two-Egg Urban Hash" data-price="110">
+                                <span>Add to Order</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 5v14M5 12h14"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Brunch Section -->
+            <section class="menu-section" data-section="brunch">
+                <div class="section-header-vintage">
+                    <div class="ornament-line"></div>
+                    <h2>Brunch Favorites</h2>
+                    <span class="section-subtitle">All-day classics</span>
+                    <div class="ornament-line"></div>
+                </div>
+
+                <div class="menu-grid">
+                    <article class="menu-item" data-category="brunch">
+                        <div class="menu-item-image">
+                            <img src="images/PHOTO-2026-01-09-19-40-51 2.jpg" alt="Triple Melt Croque">
+                            <span class="item-badge classic">CAFÉ CLASSIC</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Triple Melt Croque</h3>
+                                <span class="menu-item-price">R95</span>
+                            </div>
+                            <p>Toasted sourdough stacked with smoked ham, melted cheese & herb butter</p>
+                            <button class="btn-add" data-item="Triple Melt Croque" data-price="95">
+                                <span>Add to Order</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 5v14M5 12h14"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="menu-item" data-category="brunch">
+                        <div class="menu-item-image">
+                            <img src="images/PHOTO-2026-01-09-19-40-51.jpg" alt="Breakfast Skillet Pizza">
+                            <span class="item-badge">SIGNATURE</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Breakfast Skillet Pizza</h3>
+                                <span class="menu-item-price">R115</span>
+                            </div>
+                            <p>Egg-based base topped with tomato, mozzarella, basil & fresh greens</p>
+                            <button class="btn-add" data-item="Breakfast Skillet Pizza" data-price="115">
+                                <span>Add to Order</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 5v14M5 12h14"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="menu-item" data-category="brunch">
+                        <div class="menu-item-image">
+                            <img src="images/PHOTO-2026-01-09-19-40-51 7.jpg" alt="French Country Quiche">
+                            <span class="item-badge classic">CAFÉ CLASSIC</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>French Country Quiche</h3>
+                                <span class="menu-item-price">R78</span>
+                            </div>
+                            <p>Flaky pastry filled with egg custard, zucchini, smoked bacon & herbs</p>
+                            <button class="btn-add" data-item="French Country Quiche" data-price="78">
+                                <span>Add to Order</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 5v14M5 12h14"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Salads Section -->
+            <section class="menu-section" data-section="salads">
+                <div class="section-header-vintage">
+                    <div class="ornament-line"></div>
+                    <h2>Fresh Salads</h2>
+                    <span class="section-subtitle">Garden to table</span>
+                    <div class="ornament-line"></div>
+                </div>
+
+                <div class="menu-grid">
+                    <article class="menu-item" data-category="salads">
+                        <div class="menu-item-image">
+                            <img src="images/PHOTO-2026-01-09-19-40-51 4.jpg" alt="Sunrise Mediterranean Bowl">
+                            <span class="item-badge fresh">FRESH</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Sunrise Mediterranean Bowl</h3>
+                                <span class="menu-item-price">R92</span>
+                            </div>
+                            <p>Free-range fried egg over cucumber, cherry tomato, herbs & olive oil crunch</p>
+                            <button class="btn-add" data-item="Sunrise Mediterranean Bowl" data-price="92">
+                                <span>Add to Order</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 5v14M5 12h14"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Vintage Footer Banner -->
+    <div class="menu-footer-banner">
+        <div class="vintage-border-top"></div>
+        <div class="banner-content-centered">
+            <span class="vintage-ornament">❧</span>
+            <p>All dishes prepared with locally-sourced ingredients</p>
+            <span class="vintage-ornament">❧</span>
+        </div>
+        <div class="vintage-border-bottom"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bertrand Cafe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h3>Your Order</h3>
+            <button class="cart-drawer-close" id="cartDrawerClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="cart-drawer-body" id="cartDrawerBody">
+            <div class="cart-empty">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M4 10c0 0 0-3 8-3s8 3 8 3" />
+                    <path d="M3 10h18v2c0 5-3 9-9 9s-9-4-9-9v-2z" />
+                </svg>
+                <p>Your basket is empty</p>
+                <span>Add items from the menu to begin</span>
+            </div>
+        </div>
+        <div class="cart-drawer-footer" id="cartDrawerFooter" style="display: none;">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">R0</span>
+            </div>
+            <button class="btn-order-now">Proceed to Checkout</button>
+        </div>
+    </aside>
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+
+    <script src="script.js"></script>
+    <script src="menu-script.js"></script>
+</body>
+
+</html>

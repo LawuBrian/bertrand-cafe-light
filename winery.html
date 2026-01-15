@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winery | Bertrand Cafe</title>
+    <meta name="description"
+        content="Explore our curated wine collection at Bertrand Cafe - fine wines from around the world.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="winery-styles.css">
+</head>
+
+<body class="winery-page">
+    <!-- Dark Elegant Background -->
+    <div class="winery-bg">
+        <div class="winery-texture"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled winery-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-back">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                    <span>Back</span>
+                </a>
+            </div>
+            <a href="index.html" class="logo">
+                <span class="logo-text">Bertrand</span>
+                <span class="logo-accent">Winery</span>
+            </a>
+            <div class="nav-right">
+                <button class="nav-icon nav-cart" aria-label="Basket" id="cartToggle">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.8">
+                        <path d="M4 10c0 0 0-3 8-3s8 3 8 3" />
+                        <path d="M3 10h18v2c0 5-3 9-9 9s-9-4-9-9v-2z" />
+                    </svg>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Winery Hero -->
+    <header class="winery-hero">
+        <div class="winery-hero-bg" style="background-image: url('images/winery-bg.jpg')"></div>
+        <div class="winery-hero-overlay"></div>
+        <div class="winery-hero-content">
+            <div class="vintage-crest">
+                <svg viewBox="0 0 100 100" width="80" height="80">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="1" />
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="0.5" />
+                    <text x="50" y="58" text-anchor="middle" font-family="serif" font-size="24"
+                        fill="currentColor">BC</text>
+                </svg>
+            </div>
+            <span class="winery-tag">Est. 2018</span>
+            <h1>The Wine Cellar</h1>
+            <p class="winery-quote">"In wine there is wisdom, in beer there is freedom, in water there is bacteria."</p>
+            <span class="quote-author">— Benjamin Franklin</span>
+        </div>
+        <div class="scroll-indicator-wine">
+            <span>Discover</span>
+            <div class="scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- Wine Categories -->
+    <section class="wine-categories">
+        <div class="container">
+            <div class="wine-category-grid">
+                <div class="wine-category" data-type="red">
+                    <div class="category-icon">🍷</div>
+                    <h3>Red Wines</h3>
+                    <p>Bold & Full-Bodied</p>
+                </div>
+                <div class="wine-category" data-type="white">
+                    <div class="category-icon">🥂</div>
+                    <h3>White Wines</h3>
+                    <p>Crisp & Refreshing</p>
+                </div>
+                <div class="wine-category" data-type="rose">
+                    <div class="category-icon">🌸</div>
+                    <h3>Rosé</h3>
+                    <p>Light & Elegant</p>
+                </div>
+                <div class="wine-category" data-type="sparkling">
+                    <div class="category-icon">✨</div>
+                    <h3>Sparkling</h3>
+                    <p>Celebratory Bubbles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Wines -->
+    <section class="wine-collection">
+        <div class="container">
+            <div class="section-header-wine">
+                <span class="wine-ornament">❦</span>
+                <h2>Curated Selection</h2>
+                <p>Hand-picked wines from the finest vineyards</p>
+                <span class="wine-ornament">❦</span>
+            </div>
+
+            <div class="wine-grid">
+                <!-- Wine Card 1 -->
+                <article class="wine-card">
+                    <div class="wine-card-inner">
+                        <div class="wine-vintage-label">2019</div>
+                        <div class="wine-bottle">
+                            <div class="bottle-glow"></div>
+                            🍾
+                        </div>
+                        <div class="wine-info">
+                            <span class="wine-region">Stellenbosch, SA</span>
+                            <h3>Kanonkop Pinotage</h3>
+                            <p class="wine-notes">Dark fruit, chocolate, hints of smoke and vanilla oak</p>
+                            <div class="wine-details">
+                                <span class="wine-type red">Red</span>
+                                <span class="wine-pairing">Pairs with: Lamb, Game</span>
+                            </div>
+                            <div class="wine-footer">
+                                <div class="wine-prices">
+                                    <span class="price-glass">R85 <small>glass</small></span>
+                                    <span class="price-bottle">R450 <small>bottle</small></span>
+                                </div>
+                                <button class="btn-wine-add" data-item="Kanonkop Pinotage" data-price="450">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Wine Card 2 -->
+                <article class="wine-card">
+                    <div class="wine-card-inner">
+                        <div class="wine-vintage-label">2021</div>
+                        <div class="wine-bottle">
+                            <div class="bottle-glow"></div>
+                            🍾
+                        </div>
+                        <div class="wine-info">
+                            <span class="wine-region">Franschhoek, SA</span>
+                            <h3>Haute Cabrière Chardonnay</h3>
+                            <p class="wine-notes">Citrus, oak, buttery finish with mineral undertones</p>
+                            <div class="wine-details">
+                                <span class="wine-type white">White</span>
+                                <span class="wine-pairing">Pairs with: Seafood, Poultry</span>
+                            </div>
+                            <div class="wine-footer">
+                                <div class="wine-prices">
+                                    <span class="price-glass">R70 <small>glass</small></span>
+                                    <span class="price-bottle">R380 <small>bottle</small></span>
+                                </div>
+                                <button class="btn-wine-add" data-item="Haute Cabrière Chardonnay" data-price="380">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Wine Card 3 -->
+                <article class="wine-card">
+                    <div class="wine-card-inner">
+                        <div class="wine-vintage-label">2022</div>
+                        <div class="wine-bottle">
+                            <div class="bottle-glow"></div>
+                            🍾
+                        </div>
+                        <div class="wine-info">
+                            <span class="wine-region">Elgin Valley, SA</span>
+                            <h3>Paul Cluver Pinot Noir</h3>
+                            <p class="wine-notes">Cherry, earthy undertones, silky tannins</p>
+                            <div class="wine-details">
+                                <span class="wine-type red">Red</span>
+                                <span class="wine-pairing">Pairs with: Duck, Salmon</span>
+                            </div>
+                            <div class="wine-footer">
+                                <div class="wine-prices">
+                                    <span class="price-glass">R95 <small>glass</small></span>
+                                    <span class="price-bottle">R520 <small>bottle</small></span>
+                                </div>
+                                <button class="btn-wine-add" data-item="Paul Cluver Pinot Noir" data-price="520">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Wine Card 4 -->
+                <article class="wine-card">
+                    <div class="wine-card-inner">
+                        <div class="wine-vintage-label">2020</div>
+                        <div class="wine-bottle">
+                            <div class="bottle-glow"></div>
+                            🍾
+                        </div>
+                        <div class="wine-info">
+                            <span class="wine-region">Robertson, SA</span>
+                            <h3>Graham Beck Brut Rosé</h3>
+                            <p class="wine-notes">Strawberry, brioche, fine persistent bubbles</p>
+                            <div class="wine-details">
+                                <span class="wine-type sparkling">Sparkling</span>
+                                <span class="wine-pairing">Pairs with: Appetizers, Desserts</span>
+                            </div>
+                            <div class="wine-footer">
+                                <div class="wine-prices">
+                                    <span class="price-glass">R80 <small>glass</small></span>
+                                    <span class="price-bottle">R420 <small>bottle</small></span>
+                                </div>
+                                <button class="btn-wine-add" data-item="Graham Beck Brut Rosé" data-price="420">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wine Experience Banner -->
+    <section class="wine-experience">
+        <div class="experience-bg"></div>
+        <div class="container">
+            <div class="experience-content">
+                <h2>The Bottle Keep</h2>
+                <p>Reserve your personal wine locker at Bertrand. Store your collection, host private tastings, and
+                    enjoy exclusive member benefits.</p>
+                <a href="reservations.html" class="btn btn-wine">Reserve Your Keep</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer winery-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bertrand Cafe. Drink Responsibly.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h3>Your Selection</h3>
+            <button class="cart-drawer-close" id="cartDrawerClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="cart-drawer-body" id="cartDrawerBody">
+            <div class="cart-empty">
+                <span style="font-size: 48px;">🍷</span>
+                <p>Your wine selection is empty</p>
+            </div>
+        </div>
+        <div class="cart-drawer-footer" id="cartDrawerFooter" style="display: none;">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">R0</span>
+            </div>
+            <button class="btn-order-now">Complete Order</button>
+        </div>
+    </aside>
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+
+    <script src="script.js"></script>
+    <script src="winery-script.js"></script>
+</body>
+
+</html>

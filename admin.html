@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Bertrand Cafe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+
+<body class="admin-body">
+    <!-- Login Screen -->
+    <div class="login-screen" id="loginScreen">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="admin-crest">BC</div>
+                <h1>Bertrand Admin</h1>
+                <p>Restaurant Management System</p>
+            </div>
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required placeholder="Enter username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="Enter password">
+                </div>
+                <button type="submit" class="btn-login">
+                    Sign In
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </button>
+                <p class="login-hint">Hint: admin123 / admin123</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div class="dashboard" id="dashboard" style="display: none;">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="admin-logo">
+                    <span class="logo-text">Bertrand</span>
+                    <span class="logo-sub">Admin Panel</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-section="overview">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7" />
+                        <rect x="14" y="3" width="7" height="7" />
+                        <rect x="14" y="14" width="7" height="7" />
+                        <rect x="3" y="14" width="7" height="7" />
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" data-section="reservations">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" />
+                        <path d="M16 2v4M8 2v4M3 10h18" />
+                    </svg>
+                    <span>Reservations</span>
+                </a>
+                <a href="#" class="nav-item" data-section="lounges">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9a2 2 0 012-2h14a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                        <path d="M3 11h18" />
+                    </svg>
+                    <span>Lounges</span>
+                </a>
+                <a href="#" class="nav-item" data-section="menu">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 6h18M3 12h18M3 18h18" />
+                    </svg>
+                    <span>Menu Items</span>
+                </a>
+                <a href="#" class="nav-item" data-section="waitlist">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+                    </svg>
+                    <span>Waitlist</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn-logout" id="logoutBtn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9" />
+                    </svg>
+                    Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="content-header">
+                <div class="header-left">
+                    <h1 id="pageTitle">Dashboard</h1>
+                    <span class="header-date" id="currentDate"></span>
+                </div>
+                <div class="header-right">
+                    <a href="index.html" class="btn-view-site" target="_blank">
+                        View Site
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                        </svg>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Dashboard Overview -->
+            <section class="content-section active" id="section-overview">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon gold">📅</div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="todayReservations">0</span>
+                            <span class="stat-label">Today's Reservations</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon sage">🪑</div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="activeLounges">4</span>
+                            <span class="stat-label">Active Lounges</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon terracotta">📋</div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="menuItems">24</span>
+                            <span class="stat-label">Menu Items</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon purple">👥</div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="waitlistCount">0</span>
+                            <span class="stat-label">Waitlist Signups</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Recent Reservations</h3>
+                            <a href="#" class="view-all" data-section="reservations">View All →</a>
+                        </div>
+                        <div class="card-body" id="recentReservations">
+                            <p class="empty-state">No reservations yet</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Quick Actions</h3>
+                        </div>
+                        <div class="card-body quick-actions">
+                            <button class="quick-action" data-action="add-reservation">
+                                <span>➕</span> New Reservation
+                            </button>
+                            <button class="quick-action" data-action="add-menu">
+                                <span>🍽️</span> Add Menu Item
+                            </button>
+                            <button class="quick-action" data-action="export">
+                                <span>📊</span> Export Data
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reservations Section -->
+            <section class="content-section" id="section-reservations">
+                <div class="section-toolbar">
+                    <div class="toolbar-left">
+                        <select class="filter-select" id="reservationFilter">
+                            <option value="all">All Reservations</option>
+                            <option value="pending">Pending</option>
+                            <option value="confirmed">Confirmed</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                    <button class="btn-primary-admin" id="addReservationBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 5v14M5 12h14" />
+                        </svg>
+                        Add Reservation
+                    </button>
+                </div>
+                <div class="data-table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Guest</th>
+                                <th>Type</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Guests</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reservationsTableBody">
+                            <tr>
+                                <td colspan="7" class="empty-state">No reservations found</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Lounges Section -->
+            <section class="content-section" id="section-lounges">
+                <div class="section-toolbar">
+                    <h3>Lounge Management</h3>
+                    <button class="btn-primary-admin" id="addLoungeBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 5v14M5 12h14" />
+                        </svg>
+                        Add Lounge
+                    </button>
+                </div>
+                <div class="lounges-grid" id="loungesGrid">
+                    <div class="lounge-card">
+                        <div class="lounge-status available">Available</div>
+                        <h4>The Montmartre</h4>
+                        <p>Capacity: 8 guests</p>
+                        <div class="lounge-actions">
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Remove</button>
+                        </div>
+                    </div>
+                    <div class="lounge-card">
+                        <div class="lounge-status reserved">Reserved</div>
+                        <h4>The Seine Room</h4>
+                        <p>Capacity: 12 guests</p>
+                        <div class="lounge-actions">
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Remove</button>
+                        </div>
+                    </div>
+                    <div class="lounge-card">
+                        <div class="lounge-status available">Available</div>
+                        <h4>Le Petit Salon</h4>
+                        <p>Capacity: 6 guests</p>
+                        <div class="lounge-actions">
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Remove</button>
+                        </div>
+                    </div>
+                    <div class="lounge-card">
+                        <div class="lounge-status maintenance">Maintenance</div>
+                        <h4>The Garden Terrace</h4>
+                        <p>Capacity: 10 guests</p>
+                        <div class="lounge-actions">
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Menu Section -->
+            <section class="content-section" id="section-menu">
+                <div class="section-toolbar">
+                    <select class="filter-select" id="menuCategoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="breakfast">Breakfast</option>
+                        <option value="brunch">Brunch</option>
+                        <option value="salads">Salads</option>
+                        <option value="beverages">Beverages</option>
+                    </select>
+                    <button class="btn-primary-admin" id="addMenuBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 5v14M5 12h14" />
+                        </svg>
+                        Add Item
+                    </button>
+                </div>
+                <div class="menu-admin-grid" id="menuAdminGrid">
+                    <div class="menu-admin-item">
+                        <img src="images/PHOTO-2026-01-09-19-40-51 3.jpg" alt="">
+                        <div class="menu-admin-info">
+                            <h4>Green Power Breakfast Bowl</h4>
+                            <span class="menu-category">Breakfast</span>
+                            <span class="menu-price">R118</span>
+                        </div>
+                        <div class="menu-admin-actions">
+                            <button class="btn-icon edit">✏️</button>
+                            <button class="btn-icon delete">🗑️</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Waitlist Section -->
+            <section class="content-section" id="section-waitlist">
+                <div class="section-toolbar">
+                    <h3>Waitlist Submissions</h3>
+                    <button class="btn-secondary-admin" id="exportWaitlistBtn">
+                        Export CSV
+                    </button>
+                </div>
+                <div class="data-table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Time Preference</th>
+                                <th>Date Submitted</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="waitlistTableBody">
+                            <tr>
+                                <td colspan="5" class="empty-state">No waitlist signups yet</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="admin-script.js"></script>
+</body>
+
+</html>
